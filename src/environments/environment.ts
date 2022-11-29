@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  images: {
+    imageLogo: 'https://ra-dev.mobica.vn/images/loginLogo.png',
+    backgroupImage: 'https://ra-dev.mobica.vn/images/bg-login.jpg'
+  }
 };
 
 /*

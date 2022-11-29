@@ -1,0 +1,3 @@
+getMessage(): Array {
+    return []
+}

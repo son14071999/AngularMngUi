@@ -1,0 +1,23 @@
+.wrapper-all {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper-all .header-logo {
+  height: 120px;
+}
+
+.wrapper-all .header-logo .wrapper-image-logo {
+  text-align: center;
+}
+
+.wrapper-all .header-logo .wrapper-image-logo .image-logo {
+  max-height: 110px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.wrapper-all .wrapper-content {
+  height: 85vh;
+}
