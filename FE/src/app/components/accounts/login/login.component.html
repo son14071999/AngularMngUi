@@ -1,0 +1,45 @@
+<div class="wrapper-all" [ngStyle]="{'background-image': 'url(' + env.images.backgroupImage + ')'}">
+  <div class="row header-logo">
+    <div class="wrapper-image-logo">
+      <img [src]="env.images.imageLogo" class="image-logo">
+    </div>
+  </div>
+  <div class="row wrapper-content">
+    <div class="col-md-4 col-sm-8 offset-md-4 offset-sm-2 wrapper-form-login">
+      <div class="abc">
+        <div class="title-login">
+          <span>Đăng nhập hệ thống</span>
+        </div>
+        <form class="form-login" [formGroup]="formLogin">
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Tên tài khoản" aria-label="Username" formControlName="account"
+            name="account">
+          </div>
+          <div class="message-errors" *ngIf="errorsFormLogin && errorsFormLogin.account">
+              <div *ngFor="let err of errorsFormLogin.account">{{ err }}</div>
+          </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa-solid fa-asterisk"></i></span>
+            </div>
+            <input type="password" class="form-control" placeholder="Mật khẩu" aria-label="password" formControlName="password">
+          </div>
+          <div class="message-errors" *ngIf="errorsFormLogin && errorsFormLogin.password">
+              <div *ngFor="let err of errorsFormLogin.password">{{ err }}</div>
+          </div>
+
+          <div class="input-group mb-3" class="btn-submit">
+            <button type="submit" (click)="login()" class="btn btn-success">Đăng nhập</button>
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,0 @@
-getMessage(): Array {
-    return []
-}
