@@ -44,7 +44,8 @@ export class ValidationForm{
                 })
             }
         })
-    
+
+        console.log('end')
         return errors
     }
 }

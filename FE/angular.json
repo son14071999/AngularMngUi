@@ -73,7 +73,8 @@
               "browserTarget": "angularMngUi:build:production"
             },
             "development": {
-              "browserTarget": "angularMngUi:build:development"
+              "browserTarget": "angularMngUi:build:development",
+              "proxyConfig": "proxy.config.json"
             }
           },
           "defaultConfiguration": "development"

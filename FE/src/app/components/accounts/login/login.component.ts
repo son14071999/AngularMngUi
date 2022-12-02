@@ -21,17 +21,26 @@ export class LoginComponent implements OnInit {
         this.env = environment
         this.formLogin = new FormGroup({
             account: new FormControl('', [Validators.required]),
-            password: new FormControl('', [Validators.required, Validators.min(10)]),
+            password: new FormControl('', [Validators.required]),
         })
-        this.formLogin.controls.account.setValue('data test')
+        this.formLogin.controls.account.setValue('sonnx@newtel.vn')
+        this.formLogin.controls.password.setValue('Newtel@123')
     }
 
     ngOnInit() {
     }
 
     login() {
+        this.errorsFormLogin = {}
         if(!this.formLogin.valid){
             this.errorsFormLogin = this.validationForm.getMessageError(this.formLogin)
+            console.log('this.errorsFormLogin: ', this.errorsFormLogin)
+        }else{
+            console.log(1234)
+            this.loginService.login(this.formLogin).subscribe(data => {
+                console.log('data: ', data)
+            })
         }
+        return
     }
 }

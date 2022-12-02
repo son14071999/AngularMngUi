@@ -7,7 +7,16 @@ export const environment = {
   images: {
     imageLogo: 'https://ra-dev.mobica.vn/images/loginLogo.png',
     backgroupImage: 'https://ra-dev.mobica.vn/images/bg-login.jpg'
-  }
+  },
+  url_bases: {
+    AUTHCA: 'http://172.16.11.62/'
+  },
+  token: {
+    access_token: localStorage.getItem('access_token') ?? '',
+    refresh_token: localStorage.getItem('refresh_token') ?? ''
+  },
+  client_id: "2",
+  client_secret :"Da8W4OFBxhfZF3QkOuSGlQgDheBtEQLpF3FaByeY"
 };
 
 /*
